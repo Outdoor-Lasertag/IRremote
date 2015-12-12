@@ -9,6 +9,7 @@
 //                          SSSS    OOO   N   N    Y
 //==============================================================================
 
+#define SONY_CARRIER_FREQUENCY      38
 #define SONY_BITS                   12
 #define SONY_HDR_MARK             2400
 #define SONY_HDR_SPACE             600
@@ -22,7 +23,7 @@
 void  IRsend::sendSony (unsigned long data,  int nbits)
 {
 	// Set IR carrier frequency
-	enableIROut(40);
+	enableIROut(SONY_CARRIER_FREQUENCY);
 
 	// Header
 	mark(SONY_HDR_MARK);
